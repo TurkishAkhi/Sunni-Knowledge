@@ -1,0 +1,408 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE */
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background-color: #f4f6f5;
+  color: #1f2933;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+nav {
+  background-color: #0f3d2e;
+  color: #ffffff;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  font-size: 1.4rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* HERO */
+.hero {
+  min-height: 70vh;
+  background: linear-gradient(
+    rgba(15, 61, 46, 0.85),
+    rgba(15, 61, 46, 0.85)
+  );
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 600px;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 12px 22px;
+  border-radius: 6px;
+  background-color: #e6b800;
+  color: #0f3d2e;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 5px;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #ffcc00;
+}
+
+.btn.secondary {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: white;
+}
+
+.btn.secondary:hover {
+  background-color: white;
+  color: #0f3d2e;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 60px 40px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* METHODOLOGY */
+.methodology {
+  background-color: #ffffff;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.methodology h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.methodology p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.05rem;
+  color: #374151;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+}
+
+/* DARK MODE BUTTON */
+#darkToggle {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* DARK MODE STYLES */
+body.dark {
+  background-color: #0b1220;
+  color: #e5e7eb;
+}
+
+body.dark nav {
+  background-color: #020617;
+}
+
+body.dark .hero {
+  background: linear-gradient(
+    rgba(2, 6, 23, 0.9),
+    rgba(2, 6, 23, 0.9)
+  );
+}
+
+body.dark .card {
+  background-color: #020617;
+  color: #e5e7eb;
+}
+
+body.dark .methodology {
+  background-color: #020617;
+}
+
+body.dark .btn.secondary {
+  border-color: #e5e7eb;
+}
+
+/* HAMBURGER */
+#menuToggle {
+  display: none;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* MOBILE NAV */
+@media (max-width: 768px) {
+  #menuToggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #0f3d2e;
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+}
+
+/* PAGE HEADER */
+.page-header {
+  background-color: #e6efe9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.page-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.page-header p {
+  font-size: 1.1rem;
+  color: #374151;
+}
+
+/* CONTENT */
+.content {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* BOX SECTIONS */
+.box {
+  background-color: white;
+  padding: 30px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.box h3 {
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  color: #0f3d2e;
+}
+
+.box p,
+.box li {
+  font-size: 1rem;
+  color: #1f2933;
+}
+
+.box ul {
+  padding-left: 20px;
+}
+
+/* WARNING BOX */
+.box.warning {
+  border-left: 6px solid #b91c1c;
+  background-color: #fff5f5;
+}
+
+/* DARK MODE SUPPORT */
+body.dark .page-header {
+  background-color: #020617;
+}
+
+body.dark .page-header p {
+  color: #cbd5f5;
+}
+
+body.dark .box {
+  background-color: #020617;
+  color: #e5e7eb;
+}
+
+body.dark .box h3 {
+  color: #facc15;
+}
+
+body.dark .box.warning {
+  background-color: #1f2937;
+  border-left-color: #ef4444;
+}
+
+/* INFO BOX */
+.box.info {
+  border-left: 6px solid #2563eb;
+  background-color: #eff6ff;
+}
+
+/* EVIDENCE TEXT */
+.evidence {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #374151;
+  font-style: italic;
+}
+
+/* LINK */
+.text-link {
+  color: #0f3d2e;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+/* DARK MODE */
+body.dark .box.info {
+  background-color: #020617;
+  border-left-color: #3b82f6;
+}
+
+body.dark .evidence {
+  color: #cbd5f5;
+}
+
+/* LIST SPACING */
+.box ul li {
+  margin-bottom: 8px;
+}
+
+/* DARK MODE EVIDENCE */
+body.dark .evidence {
+  color: #cbd5f5;
+}
+
+/* LIBRARY CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.cards .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease;
+}
+
+.cards .card:hover {
+  transform: translateY(-5px);
+}
+
+.cards .card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #0f3d2e;
+}
+
+.cards .card p {
+  font-size: 0.95rem;
+  color: #374151;
+  margin-bottom: 12px;
+}
+
+/* DARK MODE */
+body.dark .cards .card {
+  background-color: #020617;
+  color: #e5e7eb;
+}
+
+/* Logo image */
+.logo {
+  height: 200px;       /* adjust as needed */
+  width: auto;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    height: 40px; /* smaller on mobile */
+  }
+}
